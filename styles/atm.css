@@ -1,0 +1,143 @@
+body {
+  background-color: #9F80AC;
+  font-family: Arial, sans-serif;
+  margin-top: 65px;
+  text-align: center; }
+
+#atm-container {
+  margin: 0 auto;
+  width: 400px; }
+
+header {
+  background-color: #116cae;
+  border-radius: 10px;
+  padding: 12px 0;
+  position: relative;
+  width: 397px;
+  vertical-align: middle; }
+
+#graffiti {
+  position: absolute;
+  top: 29px;
+  left: 179px; }
+
+#cards {
+  background: url("../images/creditcard_sprite.png") 0 0;
+  height: 21px;
+  margin: 5px auto;
+  width: 237px; }
+
+#card-sprite {
+  background: url("../images/creditcard_sprite.png") 0 0;
+  display: none;
+  height: 21px;
+  margin: 5px auto;
+  position: absolute;
+  left: 61px;
+  width: 237px;
+  z-index: 1; }
+
+section {
+  background-color: #f1f0e7;
+  border-top: 6px solid #bebebe;
+  margin: 0 auto;
+  position: relative;
+  width: 358px; }
+
+#screen {
+  background-color: #7eb4d5;
+  border: 5px solid #e1e1d6;
+  color: white;
+  font-size: .90em;
+  height: 188px;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  width: 246px; }
+
+#main-prompt {
+  margin-top: 40px; }
+
+.button-group {
+  list-style: none; }
+  .button-group li {
+    background-color: #c1c1c1;
+    border-top: 1px solid #d9d9d4;
+    border-bottom: 2px solid #9b9b9b;
+    border-right: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: .9em;
+    height: 17px;
+    margin-bottom: 9px;
+    position: relative;
+    width: 31px; }
+
+.left-side {
+  position: absolute;
+  top: 75px;
+  left: -30px; }
+  .left-side li::after {
+    content: "_";
+    color: #9b9b9b;
+    font-size: 1.3em;
+    position: absolute;
+    top: -8px;
+    left: 31px; }
+  .left-side li label {
+    position: relative;
+    top: 2px;
+    left: 63px;
+    display: block; }
+    .left-side li label::before {
+      content: "_";
+      color: white;
+      font-size: 1.3em;
+      position: absolute;
+      top: -10px;
+      left: -16px; }
+
+.right-side {
+  position: absolute;
+  top: 75px;
+  left: 276px;
+  text-align: right; }
+  .right-side li::before {
+    content: "_";
+    color: #9b9b9b;
+    font-size: 1.3em;
+    position: absolute;
+    top: -8px;
+    left: -9px; }
+  .right-side li label {
+    position: relative;
+    top: 2px;
+    left: -128px;
+    display: block;
+    width: 100px; }
+    .right-side li label::after {
+      content: "_";
+      color: white;
+      font-size: 1.3em;
+      position: absolute;
+      top: -10px;
+      left: 104px; }
+
+.kickplate {
+  position: relative; }
+
+#trash {
+  position: relative;
+  top: -20px;
+  left: -35px; }
+
+#logo {
+  position: relative;
+  top: -100px;
+  left: -10px; }
+
+.grey {
+  filter: url(../images/filters.svg#grayscale);
+  filter: gray;
+  -webkit-filter: grayscale(1); }
+
+/*# sourceMappingURL=atm.css.map */

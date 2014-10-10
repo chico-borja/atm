@@ -1,0 +1,145 @@
+@mixin positioned( $position, $top, $left ) {
+	position:$position;
+	top:$top;
+	left:$left;
+}
+
+@mixin button-pseudo-element ( $top, $left, $color ) {
+	content: "_";
+	color:$color;
+	font-size:1.3em;
+	@include positioned( absolute, $top, $left );
+} 
+
+body {
+	background-color:#9F80AC;
+	font-family:Arial, sans-serif;
+	margin-top:65px;
+	text-align:center;
+}
+
+#atm-container {
+	margin:0 auto;
+	width:400px;	
+}
+
+header {
+	background-color:#116cae;
+	border-radius:10px;
+	padding:12px 0;
+	position:relative;
+	width:397px;
+	vertical-align:middle;	
+}
+
+#graffiti { 
+	@include positioned( absolute, 29px, 179px ); 
+}
+
+#cards {
+	background:url("../images/creditcard_sprite.png") 0 0;
+	height:21px;
+	margin:5px auto;
+	width:237px;
+}
+
+#card-sprite {
+	background:url("../images/creditcard_sprite.png") 0 0;
+	display:none;
+	height:21px;
+	margin:5px auto;
+	position:absolute;
+	left:61px;
+	width:237px;
+	z-index:1;	
+}
+
+section {
+	background-color:#f1f0e7;
+	border-top: 6px solid #bebebe;
+	margin:0 auto;
+	position:relative;
+	width:358px;
+}
+
+#screen {
+	background-color:#7eb4d5;
+	border:5px solid #e1e1d6;
+	color:white;
+	font-size:.90em;
+	height:188px;
+	letter-spacing:1px;
+	margin:0 auto;
+	width:246px;	
+}
+
+#main-prompt {
+	margin-top:40px;	
+}
+
+.button-group {	
+	list-style:none;
+	li {
+		background-color:#c1c1c1;		
+		border: {
+			top:1px solid #d9d9d4;
+			bottom:2px solid #9b9b9b;
+			right:none;
+			radius:2px;
+		};
+		cursor:pointer;		
+		font-size:.9em;
+		height:17px;
+		margin-bottom:9px;
+		position:relative;
+		width:31px;
+	}
+}
+
+.left-side { 
+	@include positioned( absolute, 75px, -30px );	
+	li::after {
+		@include button-pseudo-element( -8px, 31px, #9b9b9b );
+	}
+	li label {
+		@include positioned (relative, 2px, 63px);
+		display:block;
+		&::before {
+			@include button-pseudo-element( -10px, -16px, white );
+		}
+	}
+}
+
+.right-side { 
+	@include positioned( absolute, 75px, 276px );
+	text-align:right;
+	li::before {
+		@include button-pseudo-element( -8px, -9px, #9b9b9b );
+	}
+	li label {
+		@include positioned (relative, 2px, -128px);
+		display:block;
+		width:100px;
+		&::after {
+			@include button-pseudo-element( -10px, 104px, white );
+		}
+	}
+}
+
+.kickplate {
+	position:relative;
+}
+
+#trash { 
+	@include positioned( relative, -20px, -35px );
+}
+
+#logo { 
+	@include positioned( relative, -100px, -10px );
+}
+
+.grey {
+	filter: url(../images/filters.svg#grayscale); // Firefox 3.5+
+	filter: gray; // IE6-9
+	-webkit-filter: grayscale(1); // Google Chrome, Safari 6+ & Opera 15+
+}

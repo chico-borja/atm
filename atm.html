@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Steve's ATM for Spanning</title>
+		<link rel="stylesheet" href="styles/atm.css">
+	</head>
+	<body>
+		<div id="atm-container">
+			<header>
+				<img id="atm-sign" src="images/atm_sign.png">
+				<img id="graffiti" src="images/graffiti.png">
+			</header>
+			<section>
+				<div id="card-sprite"></div>
+				<div id="cards"></div>
+				<div id="screen">
+					<div id="main-prompt">Please make a choice...</div>
+					<ul class="button-group left-side">
+						<li id="l1"></li>
+						<li id="l2"></li>
+						<li id="l3"><label>Withdraw</label></li>
+						<li id="l4"><label>Deposit</label></li>
+					</ul>
+					<ul class="button-group right-side">
+						<li id="r1"></li>
+						<li id="r2"></li>
+						<li id="r3"><label>Balance</label></li>
+						<li id="r4"><label>Re-Enter PIN</label></li>					
+					</ul>
+				</div>
+				<div class="kickplate">
+					<img id="trash" src="images/sticker_graf.png">
+					<img id="logo" src="images/spanning_systems.png">
+				</div>
+			</section>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="scripts/atm.js"></script>
+	</body>
+</html>
